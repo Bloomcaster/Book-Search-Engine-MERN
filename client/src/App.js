@@ -20,7 +20,7 @@ const authLInk = setContext((_, { header}) => {
   const token = localStorage.getItem('id_token');
   return {
     header: {
-      ...headers,
+      ...header,
       authorization: token ? `Bearer ${token}` : '',
     },
   };
