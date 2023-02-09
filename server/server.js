@@ -1,4 +1,4 @@
-require('dotenv').config();
+//require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   server.applyMiddleware({ app });
-}
+
 
 
 db.once('open', () => {
@@ -39,8 +39,8 @@ db.once('open', () => {
   console.log(`🌍 It's alive!!! The port is working:${PORT}!`);
   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
-});
-
+})
+}
 
 startApolloServer(typeDefs, resolvers);
 
