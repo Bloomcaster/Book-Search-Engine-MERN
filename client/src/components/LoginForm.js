@@ -1,5 +1,5 @@
-// see SignupForm.js for comments
-//ask if the order of the imports matter!!
+//check to see if the order of the imports matter here
+
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
